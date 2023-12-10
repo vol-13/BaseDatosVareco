@@ -1,0 +1,7 @@
+ALTER TABLE Pedido ADD CONSTRAINT MiEstadoPedido FOREIGN KEY (EstadoPedidoID) REFERENCES EstadoPedido (EstadoPedidoID);
+ALTER TABLE Pedido ADD CONSTRAINT MiCliente FOREIGN KEY (ClienteID) REFERENCES Cliente (ClienteID);
+ALTER TABLE Pedido ADD CONSTRAINT MiTipoUsuario FOREIGN KEY (UsuarioID) REFERENCES Usuario (UsuarioID);
+ALTER TABLE Usuario ADD CONSTRAINT MiTipoRol FOREIGN KEY (UsuarioRolID) REFERENCES UsuarioRol (UsuarioRolID);
+ALTER TABLE Cliente ADD CONSTRAINT MiTipoCliente FOREIGN KEY (TipoClienteID) REFERENCES TipoCliente (TipoClienteID);
+ALTER TABLE PedidoDetalle ADD CONSTRAINT MiPedido FOREIGN KEY (PedidoID) REFERENCES Pedido (PedidoID);
+ALTER TABLE PedidoDetalle ADD CONSTRAINT MiProducto FOREIGN KEY (ProductoID) REFERENCES Producto (ProductoID);
